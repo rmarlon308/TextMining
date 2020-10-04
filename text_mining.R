@@ -70,7 +70,7 @@ tf_idf = tf %>%
     group_by(tweet_screen_name) %>%
     top_n(count, n = 10) %>%
     slice_head(n = 10) %>%
-    arrange(tweet_screen_name,desc(count))
+    arrange(tweet_screen_name,desc(tf_idf))
 
 
 
