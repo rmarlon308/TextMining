@@ -127,6 +127,7 @@ for(i in 2:ncol(tf_normalized)){
         similaridad = c()
         candidato1 = c(candidato1, names(tf_normalized[i]))
         candidato2 = c(candidato2, names(tf_normalized[j]))
+
         similaridad = c(similaridad, dot(tf_normalized[i], tf_normalized[j], d = T))
         temp_frame = rbind(temp_frame, data.frame(candidato1,candidato2,similaridad))
     }
